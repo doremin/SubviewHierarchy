@@ -1,6 +1,9 @@
 # SubviewHierarchy
 
-A SwiftUI-inspired DSL that lets you build `UIView` hierarchies in a clean, declarative way.
+A **lightweight**, **SwiftUI-inspired** DSL for building UIKit `UIView` hierarchies in a clean, declarative way.
+
+> 🧪 Fully covered by tests.
+> ⚡ No external dependencies.
 
 ## 🧱 Basic Usage
 
@@ -43,3 +46,22 @@ let container = UIView() {
     buttons
 }
 ```
+
+## 🛠 Requirements
+
+- Swift 5.4+
+- iOS 13+
+
+## 📦 Installation
+
+### Swift Package Manager
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/doremin/SubviewHierarchy.git", .upToNextMajor(from: "1.0.0"))
+]
+```
+
+## 🔖 License
+
+SubviewHierarchy is released under the MIT License. See [LICENSE](LICENSE) file for more details
