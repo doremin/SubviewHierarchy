@@ -23,6 +23,21 @@ override func viewDidLoad() {
 }
 ```
 
+The above code is equivalent to:
+
+```swift
+let box1 = UIView()
+let box2 = UIView()
+let box3 = UIView()
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    box1.addSubview(box2)
+    box1.addSubview(box3)
+    view.addSubview(box1)
+}
+```
+
 ## 📚 Conditional View Injection
 
 ```swift
