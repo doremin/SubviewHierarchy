@@ -30,3 +30,4 @@ jobs:
             -sdk iphonesimulator \
             -enableCodeCoverage YES \
             clean build test \
+            | xcpretty
