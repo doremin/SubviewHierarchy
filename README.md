@@ -4,6 +4,7 @@ A **lightweight**, **SwiftUI-inspired** DSL for building UIKit `UIView` hierarch
 
 > 🧪 Fully covered by tests.
 > ⚡ No external dependencies.
+> Only 4KB in Binary Size.
 
 ## 🧱 Basic Usage
 
