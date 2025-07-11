@@ -254,4 +254,23 @@ struct SubviewHierarchyTests {
         #expect(root.subviews.count == 1)
         #expect(root.subviews[0] === label)
     }
+    
+    @Test
+    func testAddSubviewBeforeBuilder() {
+        // Given
+        let root = UIView()
+        let label = UILabel()
+        root.addSubview(label)
+        let button = UIButton()
+        
+        // When
+        root {
+            button
+        }
+        
+        // Then
+        #expect(root.subviews.count == 2)
+        #expect(root.subviews[0] === label)
+        #expect(root.subviews[1] === button)
+    }
 }
