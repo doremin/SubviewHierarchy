@@ -237,4 +237,21 @@ struct SubviewHierarchyTests {
         #expect(parent1.subviews.isEmpty)
         #expect(parent2.subviews.first == label)
     }
+    
+    @Test
+    func testDuplicateViewInstance() {
+        // Given
+        let root = UIView()
+        let label = UILabel()
+        
+        // When
+        root {
+            label
+            label
+        }
+        
+        // Then
+        #expect(root.subviews.count == 1)
+        #expect(root.subviews[0] === label)
+    }
 }
