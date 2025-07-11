@@ -216,4 +216,25 @@ struct SubviewHierarchyTests {
         #expect(root.subviews.count == 5)
         #expect(root.subviews == buttons)
     }
+    
+    @Test
+    func testReparentingView() {
+        // Given
+        let parent1 = UIView()
+        let parent2 = UIView()
+        let label = UILabel()
+        
+        // When {
+        parent1 {
+            label
+        }
+        
+        parent2 {
+            label
+        }
+        
+        // Then
+        #expect(parent1.subviews.isEmpty)
+        #expect(parent2.subviews.first == label)
+    }
 }
